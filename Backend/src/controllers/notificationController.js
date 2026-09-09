@@ -4,6 +4,41 @@ import Notification from "../models/Notification.js"
 // @desc    Get user notifications with filter and pagination
 // @route   GET /api/notification
 // @access  Private
+
+export const broadcastNotification = async (req, res) => {
+    try {
+        const { title, message } = req.body
+
+        if (!title || !message) {
+            return res.status(400).json({
+                success: false,
+                message: "Tiêu đề và nội dung là bắt buộc",
+            })
+        }
+
+        const notification = await Notification.create({
+            type: "broadcast",
+            title,
+            message,
+            isRead: false,
+            // Không cần recipient_id vì broadcast hiển thị cho tất cả users
+        })
+
+        res.status(201).json({
+            success: true,
+            message: "Đã gửi thông báo broadcast thành công",
+            data: notification,
+        })
+    } catch (error) {
+        console.error("Error broadcasting notification:", error)
+        res.status(500).json({
+            success: false,
+            message: "Không thể gửi thông báo broadcast",
+            error: error.message,
+        })
+    }
+}
+
 export const getUserNotifications = async (req, res) => {
     try {
         const userId = req.user._id

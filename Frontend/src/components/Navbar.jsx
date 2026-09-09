@@ -140,8 +140,7 @@ function Navbar() {
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  `transition-colors block px-4 py-3  duration-300 ${
-                    isActive ? "text-amber-600" : "hover:text-amber-600"
+                  `transition-colors block px-4 py-3  duration-300 ${isActive ? "text-amber-600" : "hover:text-amber-600"
                   }`
                 }
               >
@@ -206,9 +205,8 @@ function Navbar() {
                     notifications.map((notif) => (
                       <div
                         key={notif._id}
-                        className={`px-4 py-3 border-b border-gray-100 hover:bg-amber-50 transition-colors duration-200 cursor-pointer ${
-                          !notif.isRead ? "bg-amber-50/50" : ""
-                        }`}
+                        className={`px-4 py-3 border-b border-gray-100 hover:bg-amber-50 transition-colors duration-200 cursor-pointer ${!notif.isRead ? "bg-amber-50/50" : ""
+                          }`}
                       >
                         <div className="flex items-start gap-3">
                           {!notif.isRead && (
@@ -240,6 +238,7 @@ function Navbar() {
                   <NavLink
                     to="/notifications"
                     className="text-amber-600 text-sm font-medium hover:underline"
+                    onClick={() => setShowNotifications(false)}
                   >
                     Xem tất cả thông báo
                   </NavLink>
@@ -270,9 +269,8 @@ function Navbar() {
                   </span>
                   <ChevronDown
                     size={16}
-                    className={`transition-transform duration-300 ${
-                      showUserMenu ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-300 ${showUserMenu ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -371,9 +369,8 @@ function Navbar() {
                       notifications.map((notif) => (
                         <div
                           key={notif._id}
-                          className={`px-4 py-3 border-b border-gray-100 hover:bg-amber-50 transition-colors duration-200 cursor-pointer ${
-                            !notif.isRead ? "bg-amber-50/50" : ""
-                          }`}
+                          className={`px-4 py-3 border-b border-gray-100 hover:bg-amber-50 transition-colors duration-200 cursor-pointer ${!notif.isRead ? "bg-amber-50/50" : ""
+                            }`}
                         >
                           <div className="flex items-start gap-3">
                             {!notif.isRead && (
@@ -527,10 +524,9 @@ function Navbar() {
                     to={item.to}
                     onClick={() => setMobileMenuOpen(false)}
                     className={({ isActive }) =>
-                      `text-lg py-3 px-4 rounded-lg transition-colors duration-300 ${
-                        isActive
-                          ? "text-amber-500 bg-white/10 font-bold"
-                          : "hover:bg-white/10"
+                      `text-lg py-3 px-4 rounded-lg transition-colors duration-300 ${isActive
+                        ? "text-amber-500 bg-white/10 font-bold"
+                        : "hover:bg-white/10"
                       }`
                     }
                     style={{ animationDelay: `${index * 50}ms` }}
