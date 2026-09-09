@@ -71,28 +71,48 @@
 
 ## 📸 Screenshots & UI Preview
 
-### Highlights
+### 🏠 Customer Storefront Experience
 
-| Fresh Produce Banner | Store Value Proposition |
+#### 1. Home Page (`/`)
+*Full landing page showcasing the interactive hero banner, store value proposition cards, featured organic fruits, flash sale promotion countdown timer, and comprehensive footer.*
+
+<div align="center">
+  <img src="./docs/images/screenshot-home.png" alt="Market4P Home Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
+</div>
+
+<br/>
+
+#### 2. Shop & Fresh Produce Catalog (`/shop`)
+*Explore fresh categories (Fruits, Eggs, Meat, Vegetables, Bread), live discounts with savings calculation tags, best-selling groceries, and newly added farm produce.*
+
+<div align="center">
+  <img src="./docs/images/screenshot-shop.png" alt="Market4P Shop & Catalog" width="100%" style="border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
+</div>
+
+<br/>
+
+#### 3. Shopping Cart & About Us
+
+| Shopping Cart (`/cart`) | About Us & Team (`/about`) |
 | :---: | :---: |
-| ![Hero Banner](./docs/images/hero-banner.jpg) | ![Features Preview](./docs/images/features-preview.jpg) |
-| *Hero Showcase & Store Atmosphere* | *Farm-fresh Quality & Service Guarantees* |
+| <img src="./docs/images/screenshot-cart.png" alt="Shopping Cart" width="480" /> | <img src="./docs/images/screenshot-about.png" alt="About Us & Team" width="480" /> |
+| *Real-time cart management & quick checkout* | *Why Choose Market4P & Core Engineering Team* |
 
-### Application Screenshots
+<br/>
 
-| Page | Preview |
-| :--- | :--- |
-| **Home Page** | <img src="./docs/images/screenshot-home.png" alt="Home Page Screenshot" width="500" /><br/>*`docs/images/screenshot-home.png`* |
-| **Shop & Catalog** | <img src="./docs/images/screenshot-shop.png" alt="Shop Page Screenshot" width="500" /><br/>*`docs/images/screenshot-shop.png`* |
-| **Cart & Checkout** | <img src="./docs/images/screenshot-cart.png" alt="Cart Screenshot" width="500" /><br/>*`docs/images/screenshot-cart.png`* |
-| **Admin Dashboard** | <img src="./docs/images/screenshot-admin.png" alt="Admin Dashboard Screenshot" width="500" /><br/>*`docs/images/screenshot-admin.png`* |
+### 🛡️ Admin Dashboard & Authentication
 
-> 💡 **Adding your own screenshots:**
-> Simply capture your application screens and drop the files into the `docs/images/` directory with the matching filenames:
-> - `docs/images/screenshot-home.png`
-> - `docs/images/screenshot-shop.png`
-> - `docs/images/screenshot-cart.png`
-> - `docs/images/screenshot-admin.png`
+| Admin Dashboard (`/admin/dashboard`) | Authentication (`/login`) |
+| :---: | :---: |
+| <img src="./docs/images/screenshot-admin.png" alt="Admin Dashboard" width="480" /> | <img src="./docs/images/screenshot-login.png" alt="Login Portal" width="480" /> |
+| *KPI statistics, sales revenue, orders & category metrics* | *Secure authentication with password toggle & Google sign-in* |
+
+> 💡 **Automated Screenshot Refresh:**
+> To re-capture and automatically update all screenshots from the live application, run:
+> ```bash
+> cd Frontend
+> npm run capture:screenshots
+> ```
 
 ---
 
